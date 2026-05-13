@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiservicios Carranza</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        🛒 Multiservicios Carranza
+    </div>
+
+    <div class="buscador">
+        <input 
+        type="text"
+        id="busqueda"
+        placeholder="Buscar productos..."
+        onkeyup="buscarProducto()">
+    </div>
+
+    <nav class="menu">
+
+        <button onclick="volverInicio()">
+            Inicio
+        </button>
+
+        <button onclick="window.scrollTo(0,document.body.scrollHeight)">
+            Contacto
+        </button>
+
+    </nav>
+
+</header>
+
+<!-- PANEL CARRITO -->
+
+<div id="carrito" class="carrito">
+
+    <h2>🛒 Carrito de Compras</h2>
+
+    <div id="lista-carrito"></div>
+
+    <h3 id="total">Total: $0</h3>
+
+    <button class="btn-finalizar">
+        Finalizar compra
+    </button>
+
+    <button class="cerrar-carrito" onclick="cerrarCarrito()">
+        Cerrar
+    </button>
+
+</div>
+
+
+<div class="carrito-icono" onclick="abrirCarrito()">
+    🛒 <span id="contador-carrito">0</span>
+</div>
+
+
+<div id="inicio" class="portada">
+
+    <img src="img/portada.jpg" class="img-portada">
+
+    <div class="contenido-portada">
+        <h1>Bienvenido a Multiservicios Carranza</h1>
+        <p>Selecciona una categoría para ver los productos</p>
+
+        
+     <div class="categorias">
+
+    <div class="categoria-card" onclick="filtrar('artesanias')">
+        <img src="img/artesania.jpg">
+        <h2>ARTESANÍAS</h2>
+    </div>
+
+    <div class="categoria-card" onclick="filtrar('ropa')">
+        <img src="img/ropa.jpg">
+        <h2>ROPA</h2>
+    </div>
+
+    <div class="categoria-card" onclick="filtrar('electronica')">
+        <img src="img/electronica.jpg">
+        <h2>ELECTRÓNICA</h2>
+    </div>
+
+    <div class="categoria-card" onclick="filtrar('refacciones')">
+        <img src="img/refaccion.jpg">
+        <h2>REFACCIONES</h2>
+    </div>
+
+    <div class="categoria-card" onclick="filtrar('muebles')">
+        <img src="img/muebles.jpg">
+        <h2>MUEBLES</h2>
+    </div>
+
+</div>
+
+</div>
+</div>
+
+<div class="contenedor" id="productos" style="display:none;"></div>
+
+<script src="script.js"></script>
+
+<footer id="footer" class="footer">
+
+    <div>
+        <h3>📍 Dirección</h3>
+        <p>Venustiano Carranza, Chiapas</p>
+    </div>
+
+    <div>
+        <h3>📞 Contacto</h3>
+        <p>961-701-46-73</p>
+    </div>
+
+
+    <div>
+        <h3>🌐 Redes Sociales</h3>
+        <p>Facebook | Instagram | WhatsApp</p>
+
+    </div>
+
+</footer>
+
+
+
+</body>
+
+</html>
